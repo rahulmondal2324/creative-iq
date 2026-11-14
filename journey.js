@@ -33,7 +33,7 @@ export function startJourney(motion) {
   if (!journey) return;
   const pin = journey.querySelector('.journey-pin');
   const intro = document.querySelector('.journey-intro');
-  const header = document.querySelector('body:not(.home-page) .site-header');
+  const header = document.querySelector('.site-header');
   const scene = document.querySelector('.scene');
   const photos = [...scene.querySelectorAll('.scene-images img')];
   const chapters = [...scene.querySelectorAll('.chapter')];
@@ -112,7 +112,8 @@ export function startJourney(motion) {
     if (motion.matches || innerHeight < 460 || !CSS.supports('clip-path', 'path("M 0 0 L 20 20 Z")') || !CSS.supports('height', '100svh')) {
       document.documentElement.classList.remove('cinematic', 'can-reveal');
       journey.classList.remove('ready');
-      header?.removeAttribute('style');
+      header?.style.removeProperty('--nav-opacity');
+      header?.style.removeProperty('--nav-border');
       header?.classList.remove('over-journey');
       intro.removeAttribute('style');
       chapters.forEach(chapter => {

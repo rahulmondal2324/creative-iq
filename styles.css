@@ -857,9 +857,9 @@ html.reel-scrolling { overflow: hidden; overscroll-behavior: none; }
   .footer-subscribe input[type="email"] { flex-basis: 100%; }
 }
 
-/* Let the homepage navigation sit over the hero until the first scroll. */
+/* Keep the header solid between the hero and full-screen Services. */
 .home-page .site-header {
-  background: #fff;
+  background: rgb(255 255 255 / var(--nav-opacity, 1));
   transition: background-color .22s ease, border-color .22s ease;
 }
 
