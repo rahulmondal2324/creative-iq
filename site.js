@@ -6,6 +6,15 @@ import { startLearningMix } from "./learning-mix.js";
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#nav');
+const header = document.querySelector('.site-header');
+
+function syncHeader() {
+  header.classList.toggle('is-scrolled', window.scrollY > 1);
+}
+
+syncHeader();
+window.addEventListener('scroll', syncHeader, { passive: true });
+window.addEventListener('pageshow', syncHeader);
 
 function setMenu(open) {
   toggle.setAttribute('aria-expanded', String(open));

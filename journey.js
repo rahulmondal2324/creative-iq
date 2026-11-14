@@ -33,7 +33,7 @@ export function startJourney(motion) {
   if (!journey) return;
   const pin = journey.querySelector('.journey-pin');
   const intro = document.querySelector('.journey-intro');
-  const header = document.querySelector('.site-header');
+  const header = document.querySelector('body:not(.home-page) .site-header');
   const scene = document.querySelector('.scene');
   const photos = [...scene.querySelectorAll('.scene-images img')];
   const chapters = [...scene.querySelectorAll('.chapter')];
@@ -51,10 +51,12 @@ export function startJourney(motion) {
     intro.style.opacity = introOpacity;
     scene.style.setProperty("--shade", mix(.21, 1, ease(grow)));
     scene.style.clipPath = grow >= 1 ? 'none' : aperture(width, height, box, grow);
-    const headerFade = ease((grow - .42) / .58) * (1 - ease((progress - .95) / .05));
-    header.classList.toggle('over-journey', headerFade > .58);
-    header.style.setProperty('--nav-opacity', 1 - headerFade);
-    header.style.setProperty('--nav-border', .12 * (1 - headerFade));
+    if (header) {
+      const headerFade = ease((grow - .42) / .58) * (1 - ease((progress - .95) / .05));
+      header.classList.toggle('over-journey', headerFade > .58);
+      header.style.setProperty('--nav-opacity', 1 - headerFade);
+      header.style.setProperty('--nav-border', .12 * (1 - headerFade));
+    }
 
     const opening = ease(grow);
     const previewScale = Math.max((box.right - box.x) / imageWidth, (box.bottom - box.y) / imageHeight);
@@ -110,8 +112,8 @@ export function startJourney(motion) {
     if (motion.matches || innerHeight < 460 || !CSS.supports('clip-path', 'path("M 0 0 L 20 20 Z")') || !CSS.supports('height', '100svh')) {
       document.documentElement.classList.remove('cinematic', 'can-reveal');
       journey.classList.remove('ready');
-      header.removeAttribute('style');
-      header.classList.remove('over-journey');
+      header?.removeAttribute('style');
+      header?.classList.remove('over-journey');
       intro.removeAttribute('style');
       chapters.forEach(chapter => {
         chapter.removeAttribute('style');

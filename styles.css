@@ -856,3 +856,39 @@ html.reel-scrolling { overflow: hidden; overscroll-behavior: none; }
   .footer-columns { grid-template-columns: minmax(0, 1fr); }
   .footer-subscribe input[type="email"] { flex-basis: 100%; }
 }
+
+/* Let the homepage navigation sit over the hero until the first scroll. */
+.home-page .site-header {
+  background: #fff;
+  transition: background-color .22s ease, border-color .22s ease;
+}
+
+.home-page .site-header:not(.is-scrolled) {
+  background: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.home-page .site-header:not(.is-scrolled) .brand-logo-default { display: none; }
+.home-page .site-header:not(.is-scrolled) .brand-logo-white { display: block; }
+.home-page .site-header:not(.is-scrolled) .menu-toggle:focus-visible,
+.home-page .site-header:not(.is-scrolled) .brand:focus-visible { outline-color: var(--gold); }
+
+.home-page .hero-art { top: 0; }
+.home-page .hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc(var(--nav) + 40px);
+  background: linear-gradient(180deg, #0c2115ed 0%, #0c2115c7 58%, transparent 100%);
+  pointer-events: none;
+}
+
+@media (min-width: 1101px) {
+  .home-page .site-header:not(.is-scrolled) #nav > a:hover { color: #ffe178; }
+  .home-page .site-header:not(.is-scrolled) #nav a:focus-visible { outline-color: var(--gold); }
+}
+
+@media (max-width: 640px) {
+  .home-page .hero-art { height: calc(clamp(270px, 93vw, 490px) + var(--nav)); }
+}
