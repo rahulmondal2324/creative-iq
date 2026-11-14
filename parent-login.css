@@ -1,0 +1,226 @@
+#parent-login-trigger {
+  border: 0;
+  cursor: pointer;
+}
+
+html:has(.parent-login[open]) {
+  overflow: hidden;
+}
+
+.parent-login {
+  width: min(30rem, calc(100% - 1.5rem));
+  max-height: calc(100% - 1.5rem);
+  padding: 0;
+  border: 1px solid #afc09a;
+  border-radius: 1.6rem;
+  background: #f5f8eb;
+  color: var(--ink);
+  box-shadow: 0 24px 80px #09170d65;
+  overscroll-behavior: contain;
+}
+
+.parent-login[open] {
+  animation: parent-login-enter .32s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.parent-login::backdrop {
+  background: #0b1a10b5;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes parent-login-enter {
+  from { opacity: 0; transform: translateY(15px) scale(.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.parent-login-header,
+.parent-login-content {
+  padding: clamp(1.15rem, 5vw, 2rem);
+}
+
+.parent-login-header {
+  display: flex;
+  position: relative;
+  isolation: isolate;
+  align-items: end;
+  min-height: clamp(8.25rem, 34vw, 10.5rem);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 95% -10%, #3b6033, transparent 72%), #172d1e;
+  color: #f5f8eb;
+}
+
+.parent-login-header h2 {
+  position: relative;
+  font-size: clamp(2.5rem, 9.5vw, 4.05rem);
+  line-height: .96;
+}
+
+.parent-login-header h2 em {
+  color: #ffe178;
+}
+
+.parent-login-close {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #bfd5ae65;
+  border-radius: 50%;
+  background: #172d1e;
+  color: #f5f8eb;
+  font-size: 1.45rem;
+  cursor: pointer;
+}
+
+.parent-login-close:hover {
+  background: #385131;
+}
+
+.parent-login-close:focus-visible {
+  outline-color: #ffe178;
+}
+
+.parent-login-bricks {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.parent-login-bricks i {
+  position: absolute;
+  display: block;
+  border-radius: .75rem;
+  aspect-ratio: 2 / 1;
+  background: radial-gradient(circle at 26% 49%, #fff4a9 0 12%, transparent 14%),
+    radial-gradient(circle at 74% 49%, #fff4a9 0 12%, transparent 14%), #e9bc3b;
+  box-shadow: .14rem .42rem 0 #101f16, inset 0 -4px 0 #0002;
+}
+
+.parent-login-bricks i:nth-child(1) {
+  width: clamp(3.75rem, 16vw, 6rem);
+  top: 20%;
+  right: 22%;
+  transform: rotate(-23deg);
+}
+
+.parent-login-bricks i:nth-child(2) {
+  width: clamp(4rem, 16vw, 6.5rem);
+  right: -1.4rem;
+  bottom: 8%;
+  transform: rotate(29deg);
+  background-color: #9ab56f;
+}
+
+.parent-login-bricks i:nth-child(3) {
+  width: 2.75rem;
+  top: 15%;
+  right: 48%;
+  transform: rotate(20deg);
+  background-color: #ad9cc5;
+  opacity: .8;
+}
+
+.parent-login-progress {
+  display: flex;
+  gap: .55rem;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  list-style: none;
+}
+
+.parent-login-progress li {
+  flex: 1;
+  border-top: 3px solid #cbd7bd;
+  padding-top: .5rem;
+  color: #46583e;
+  font-size: .83rem;
+}
+
+.parent-login-progress [aria-current],
+.parent-login-progress [data-done] {
+  border-color: #5a802e;
+  color: #2c4619;
+  font-weight: 900;
+}
+
+.parent-login-step {
+  display: grid;
+  gap: .7rem;
+}
+
+.parent-login [hidden] {
+  display: none;
+}
+
+.parent-login-step label {
+  font-weight: 900;
+}
+
+.parent-login-step input {
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid #97ac86;
+  border-radius: .85rem;
+  padding: .72rem .9rem;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+.parent-login-step input:focus-visible {
+  outline: 2px solid var(--green-dark);
+  outline-offset: 2px;
+}
+
+.parent-login-hint {
+  width: fit-content;
+  padding: .4rem .65rem;
+  border-radius: .55rem;
+  background: #e6edda;
+  color: #32472a;
+  font-size: .85rem;
+}
+
+.parent-login-hint strong {
+  margin-left: .3rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .12em;
+}
+
+.parent-login-action {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  margin-top: .25rem;
+}
+
+.parent-login-action:hover {
+  background: #ffe178;
+  transform: none;
+}
+
+.parent-login-text {
+  place-self: center;
+  min-height: 44px;
+  border: 0;
+  padding: 0 .3rem;
+  background: transparent;
+  color: #3d6100;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.parent-login-step h3 {
+  font-size: clamp(1.7rem, 6vw, 2.3rem);
+}
+
+.parent-login-step h3 span {
+  color: #4b7526;
+}

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore Creative IQ holiday camps, after-school clubs and hands-on robotics and coding courses.">
+<meta name="theme-color" content="#16230e"><title>Creative IQ | STEM, Sustainability &amp; Community</title>
+<link rel="stylesheet" href="styles.css"><script defer src="assets/vendor/jquery.slim.min.js"></script><script defer src="assets/vendor/owl.carousel.min.js"></script><script src="site.js" type="module"></script>
+<link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
+<link rel="stylesheet" href="parent-login.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="header">
+<div class="nav-wrap">
+<a class="brand" href="#top" aria-label="Creative IQ home"><img class="brand-logo-default" src="assets/creative-iq-logo.png" alt="" width="126" height="87"><img class="brand-logo-white" src="assets/creative-iq-logo-white.webp" alt="" width="280" height="204"></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu <span aria-hidden="true">+</span></button>
+<nav id="nav" aria-label="Main navigation">
+<a href="#top" aria-current="page">Home</a>
+<a href="/our-story/">Our Story</a>
+<a href="/our-brands/">Our Brands</a>
+<a href="/our-courses/">Our Courses</a>
+<a href="/our-locations/">Our Locations</a>
+<a href="/for-the-community/">For the Community</a>
+<div class="nav-actions">
+<a class="button nav-course" href="https://sms.stem-club.co.uk/creative-iq/after-school-club">Book a Course</a>
+<a class="button nav-camp" href="/holiday-camps/">Book Holiday Camps <span aria-hidden="true">↗</span></a>
+</div>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero dark" id="top" aria-labelledby="hero-title">
+<div class="hero-grid wrap">
+<div class="hero-copy">
+<p class="kicker"><i></i> THE HANDS-ON STEM CLUB</p>
+<h1 id="hero-title">Empowering the Next Generation through <em>STEM, Sustainability &amp; Community</em></h1>
+<div class="actions">
+<button type="button" class="button" id="parent-login-trigger" aria-haspopup="dialog" aria-controls="parent-login">Parent Login <span aria-hidden="true">↗</span></button>
+<button type="button" class="play-preview" aria-haspopup="dialog"><span class="play-icon" aria-hidden="true"></span> Play video</button>
+</div>
+</div>
+<div class="hero-art">
+<picture class="hero-photo">
+<source media="(max-width: 640px)" srcset="assets/robot-hero-mobile.webp">
+<img src="assets/robot-hero.webp" alt="A friendly blue and yellow robot waving from a STEM workshop bench" fetchpriority="high">
+</picture>
+</div>
+</div>
+<div class="play-pieces" aria-hidden="true"></div>
+</section>
+<dialog class="parent-login" id="parent-login" aria-labelledby="parent-login-title">
+  <div class="parent-login-header">
+    <form method="dialog"><button class="parent-login-close" type="submit" aria-label="Close parent login">×</button></form>
+    <div class="parent-login-bricks" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h2 id="parent-login-title" tabindex="-1" autofocus>Parent <em>login.</em></h2>
+  </div>
+
+  <div class="parent-login-content">
+    <ol class="parent-login-progress" aria-label="Login steps">
+      <li aria-current="step">Mobile number</li>
+      <li>Verification</li>
+    </ol>
+    <form id="parent-phone-step" method="dialog" class="parent-login-step">
+      <label for="parent-phone">Enter your mobile number</label>
+      <input id="parent-phone" type="tel" inputmode="tel" autocomplete="off" maxlength="24" required>
+      <button class="button parent-login-action" type="submit">Continue <span aria-hidden="true">→</span></button>
+    </form>
+
+    <form id="parent-code-step" method="dialog" class="parent-login-step" hidden>
+      <label for="parent-code">Enter the six-digit code</label>
+      <p id="parent-code-hint" class="parent-login-hint">Preview code <strong></strong></p>
+      <input id="parent-code" type="text" inputmode="numeric" autocomplete="off" maxlength="6" pattern="[0-9]{6}" aria-describedby="parent-code-hint" required>
+      <button class="button parent-login-action" type="submit">Verify code <span aria-hidden="true">→</span></button>
+      <button type="button" class="parent-login-text" id="parent-change-phone">Change mobile number</button>
+    </form>
+
+    <div id="parent-login-complete" class="parent-login-step" hidden>
+      <h3 tabindex="-1">Code verified <span aria-hidden="true">✓</span></h3>
+      <p>You’ve completed the preview.</p>
+      <form method="dialog"><button class="button parent-login-action" type="submit">Done</button></form>
+    </div>
+  </div>
+</dialog>
+<script type="module" src="parent-login.js"></script>
+<dialog class="preview-dialog" aria-labelledby="preview-title">
+<div class="preview-header">
+<h2 id="preview-title">Creative IQ in action</h2>
+<form method="dialog"><button class="preview-close" autofocus aria-label="Close video">×</button></form>
+</div>
+<video controls playsinline preload="none" poster="assets/pages/stem-team-800.webp" src="assets/stem-preview.mp4"></video>
+</dialog>
+<section id="learning-mix" class="learning-mix" aria-label="The Creative IQ learning mix">
+<div class="wrap learning-mix-grid">
+<svg class="mix-graphic mix-mind" viewBox="0 0 360 305" role="img" aria-label="For the Mind, 30% Logic">
+<defs><path id="mix-mind-curve" d="M 24,153 C 95,29 261,28 338,153"></path></defs>
+<text class="mix-arc" aria-hidden="true"><textPath href="#mix-mind-curve" startOffset="50%" text-anchor="middle"><tspan data-beat="">For</tspan> <tspan data-beat="">the</tspan> <tspan data-beat="">Mind</tspan> <tspan data-beat="">→</tspan> <tspan data-beat="">→</tspan> <tspan data-beat="">→</tspan></textPath></text>
+<text class="mix-number" x="180" y="203" text-anchor="middle" data-beat="" aria-hidden="true">30%</text>
+<text class="mix-label" x="180" y="245" text-anchor="middle" data-beat="" aria-hidden="true">Logic</text>
+</svg>
+<svg class="mix-graphic mix-body" viewBox="0 0 360 305" role="img" aria-label="For the Body, 40% Engineering">
+<defs><path id="mix-body-curve" d="M 20,190 C 94,315 263,315 340,190"></path></defs>
+<text class="mix-arc" aria-hidden="true"><textPath href="#mix-body-curve" startOffset="50%" text-anchor="middle"><tspan data-beat="">For</tspan> <tspan data-beat="">the</tspan> <tspan data-beat="">Body</tspan> <tspan data-beat="">→</tspan> <tspan data-beat="">→</tspan> <tspan data-beat="">→</tspan></textPath></text>
+<text class="mix-number" x="180" y="128" text-anchor="middle" data-beat="" aria-hidden="true">40%</text>
+<text class="mix-label" x="180" y="170" text-anchor="middle" data-beat="" aria-hidden="true">Engineering</text>
+</svg>
+<svg class="mix-graphic mix-spirit" viewBox="0 0 360 305" role="img" aria-label="For the Spirit, 30% Creativity">
+<defs><path id="mix-spirit-curve" d="M 22,153 C 95,27 261,28 338,153"></path></defs>
+<text class="mix-arc" aria-hidden="true"><textPath href="#mix-spirit-curve" startOffset="50%" text-anchor="middle"><tspan data-beat="">For</tspan> <tspan data-beat="">the</tspan> <tspan data-beat="">Spirit</tspan> <tspan data-beat="">→</tspan> <tspan data-beat="">→</tspan> <tspan data-beat="">→</tspan></textPath></text>
+<text class="mix-number" x="180" y="203" text-anchor="middle" data-beat="" aria-hidden="true">30%</text>
+<text class="mix-label" x="180" y="245" text-anchor="middle" data-beat="" aria-hidden="true">Creativity</text>
+</svg>
+</div>
+</section>
+<section class="feature-reel light" id="feature-reel" aria-labelledby="feature-reel-title">
+  <div class="feature-reel-pin wrap">
+    <h2 id="feature-reel-title">Creative IQ in action.</h2>
+    <div class="feature-reel-stage">
+      <p class="feature-reel-copy">See how children turn ideas into real projects through robotics, coding and hands-on teamwork.</p>
+      <div class="feature-reel-frame">
+        <video controls playsinline muted loop preload="none" poster="https://www.creative-iq.co.uk/wp-content/uploads/2025/09/Rectangle-46-scaled.jpg" aria-label="Creative IQ homepage video">
+          <source src="https://www.creative-iq.co.uk/wp-content/uploads/2025/09/Webisite_Video.mp4" type="video/mp4">
+          <a href="https://www.creative-iq.co.uk/wp-content/uploads/2025/09/Webisite_Video.mp4">Open the Creative IQ reel</a>
+        </video>
+      </div>
+      <button class="feature-reel-play" type="button" hidden aria-label="Play Creative IQ reel with sound">
+        <span class="play-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+<section class="principles light" id="principles" aria-labelledby="principles-title">
+  <div class="wrap">
+    <div class="principles-heading">
+      <h2 id="principles-title">Our core <em>principles.</em></h2>
+      <a class="button principles-cta" href="/our-courses/">View our courses <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="principles-workbench">
+      <div class="principles-options" role="group" aria-label="Explore the core principles" hidden>
+        <button type="button" class="principle-option" aria-pressed="true" aria-controls="principle-lead">
+          Leadership through learning
+        </button>
+        <button type="button" class="principle-option" aria-pressed="false" aria-controls="principle-test">
+          Fail fast, learn faster
+        </button>
+        <button type="button" class="principle-option" aria-pressed="false" aria-controls="principle-create">
+          Creativity with purpose
+        </button>
+      </div>
+      <article class="principle-panel principle-lead" id="principle-lead" aria-labelledby="principle-lead-title">
+        <div class="principle-art">
+          <div class="principle-lines" aria-hidden="true"></div>
+          <div class="principle-photo"><img src="assets/pages/stem-team.webp" alt="Children working on a robotics project together" width="1672" height="941" loading="lazy"></div>
+          <span class="principle-block" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div class="principle-copy">
+          <h3 id="principle-lead-title">Leadership through learning</h3>
+          <p>Children build the confidence to take the initiative by making decisions, solving problems and guiding projects of their own.</p>
+          <p class="principle-outcome">Build independence and teamwork.</p>
+        </div>
+      </article>
+      <article class="principle-panel principle-test" id="principle-test" aria-labelledby="principle-test-title">
+        <div class="principle-art">
+          <div class="principle-lines" aria-hidden="true"></div>
+          <div class="principle-photo"><img src="assets/pages/coding-workbench.webp" alt="A child programming a small robot" width="1672" height="941" loading="lazy"></div>
+          <span class="principle-block" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div class="principle-copy">
+          <h3 id="principle-test-title">Fail fast, learn faster</h3>
+          <p>When a build stalls or the code surprises them, children work out what happened, change one thing and test it again.</p>
+          <p class="principle-outcome">Develop resilience through practice.</p>
+        </div>
+      </article>
+      <article class="principle-panel principle-create" id="principle-create" aria-labelledby="principle-create-title">
+        <div class="principle-art">
+          <div class="principle-lines" aria-hidden="true"></div>
+          <div class="principle-photo"><img src="assets/pages/robotics-build.webp" alt="A modular wheeled robot on a workbench" width="1672" height="941" loading="lazy"></div>
+          <span class="principle-block" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div class="principle-copy">
+          <h3 id="principle-create-title">Creativity with purpose</h3>
+          <p>Children explore imaginative ideas and put them to work on real challenges, thinking about what they’re making and who it could help.</p>
+          <p class="principle-outcome">Connect ideas to real-world needs.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="journey dark" id="programmes" aria-labelledby="services-title">
+  <div class="journey-pin">
+    <div class="journey-intro wrap" id="journey">
+      <h2 id="services-title">Explore <em>our services.</em></h2>
+    </div>
+    <div class="scene">
+      <div class="scene-images" aria-hidden="true">
+        <img src="assets/pages/robotics-build.webp" alt="" width="1672" height="941">
+        <img src="assets/pages/coding-workbench.webp" alt="" width="1672" height="941" loading="lazy">
+        <img src="assets/pages/stem-team.webp" alt="" width="1672" height="941" loading="lazy">
+      </div>
+      <div class="scene-shade"></div>
+      <div class="scene-copy wrap">
+        <article class="chapter">
+          <img class="chapter-photo" src="assets/pages/robotics-build.webp" alt="A robot built from interlocking parts" width="1672" height="941" loading="lazy">
+          <h3>Robotics and engineering courses</h3>
+          <p class="chapter-description">Build working robots, explore mechanical systems and solve hands-on engineering challenges as the projects get more advanced.</p>
+          <a class="button" href="/our-courses/">Explore robotics courses <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="chapter">
+          <img class="chapter-photo" src="assets/pages/coding-workbench.webp" alt="A child using a laptop to program a robot" width="1672" height="941" loading="lazy">
+          <h3>Coding courses</h3>
+          <p class="chapter-description">Start with simple coding logic and work towards Python and AI-inspired challenges through practical projects.</p>
+          <a class="button" href="/our-courses/">Explore coding courses <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="chapter">
+          <img class="chapter-photo" src="assets/pages/stem-team.webp" alt="Children working together on a STEM project" width="1672" height="941" loading="lazy">
+          <h3>Workshops</h3>
+          <p class="chapter-description">Bring practical STEM activities to your school or community group with a Creative IQ workshop.</p>
+          <a class="button" href="/for-the-community/">Explore workshops <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <div class="story-meter" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+</section>
+<section class="testimonials dark" id="testimonials" aria-label="Creative IQ testimonials">
+  <div class="wrap">
+    <div class="review-heading">
+      <div class="review-controls" hidden>
+        <button type="button" aria-label="Previous testimonial" aria-controls="testimonial-list">←</button>
+        <button type="button" aria-label="Next testimonial" aria-controls="testimonial-list">→</button>
+      </div>
+    </div>
+    <div class="review-list" id="testimonial-list" tabindex="0" aria-label="Creative IQ testimonials">
+      <article class="review-card">
+        <figure>
+          <span class="review-initials" aria-hidden="true">DT</span>
+          <blockquote><p>“make robotics and coding accessible to young minds”</p></blockquote>
+          <figcaption>Dhwani Tejwani<span class="review-stars" role="img" aria-label="4 out of 5 stars">★★★★<span>★</span></span></figcaption>
+        </figure>
+      </article>
+      <article class="review-card">
+        <figure>
+          <span class="review-initials" aria-hidden="true">AP</span>
+          <blockquote><p>“help children build confidence”</p></blockquote>
+          <figcaption>Anika Patel<span class="review-stars" role="img" aria-label="4 out of 5 stars">★★★★<span>★</span></span></figcaption>
+        </figure>
+      </article>
+      <article class="review-card">
+        <figure>
+          <span class="review-initials" aria-hidden="true">AB</span>
+          <blockquote><p>“a creative and welcoming community”</p></blockquote>
+          <figcaption>Aya Belhadi<span class="review-stars" role="img" aria-label="4 out of 5 stars">★★★★<span>★</span></span></figcaption>
+        </figure>
+      </article>
+      <article class="review-card">
+        <figure>
+          <span class="review-initials" aria-hidden="true">AN</span>
+          <blockquote><p>“being able to play with what you built”</p></blockquote>
+          <figcaption>Alaa Nejmeh</figcaption>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="answers light" id="faqs" aria-labelledby="answers-title">
+  <div class="wrap">
+    <div class="community-heading">
+      <h2 id="answers-title">Parent &amp; Instructor <em>FAQs.</em></h2>
+    </div>
+    <div class="answer-layout">
+      <div class="answer-topics" role="group" aria-label="FAQ topics" hidden>
+        <button type="button" aria-controls="faq-topic-0" aria-pressed="true">Booking &amp; Enrolment</button>
+        <button type="button" aria-controls="faq-topic-1" aria-pressed="false">Trial Sessions</button>
+        <button type="button" aria-controls="faq-topic-2" aria-pressed="false">Courses vs. Clubs</button>
+        <button type="button" aria-controls="faq-topic-3" aria-pressed="false">Student Progress</button>
+        <button type="button" aria-controls="faq-topic-4" aria-pressed="false">STEM Competitions</button>
+        <button type="button" aria-controls="faq-topic-5" aria-pressed="false">Workshops</button>
+        <button type="button" aria-controls="faq-topic-6" aria-pressed="false">Robotics</button>
+        <button type="button" aria-controls="faq-topic-7" aria-pressed="false">Safety</button>
+        <button type="button" aria-controls="faq-topic-8" aria-pressed="false">Cancellations</button>
+        <button type="button" aria-controls="faq-topic-9" aria-pressed="false">Student Engagement</button>
+      </div>
+      <div class="answer-panels">
+      <div class="answer-group" id="faq-topic-0">
+        <h3>Booking &amp; Enrolment</h3>
+        <details open>
+          <summary>How do I book a STEM robotics or coding course for my child?</summary>
+          <p>Choose the age group, course and venue on the <a href="https://book.creative-iq.co.uk/book-now">Creative IQ booking page</a>, then follow the checkout steps.</p>
+        </details>
+        <details>
+          <summary>Can I book more than one child at the same time?</summary>
+          <p>Yes. Add each child’s details at checkout to book them together.</p>
+        </details>
+        <details>
+          <summary>Do you offer sibling discounts?</summary>
+          <p>Use SIBLING10 at checkout for 10% off a sibling’s course booking.</p>
+        </details>
+        <details>
+          <summary>Can my child join mid-term?</summary>
+          <p>Yes, when places are available. The team checks your child’s skills to help them start at a suitable level.</p>
+        </details>
+        <details>
+          <summary>How much do courses cost?</summary>
+          <p>Fees depend on the venue, programme and duration. See the listed price on the <a href="https://book.creative-iq.co.uk/book-now">Creative IQ booking page</a>.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-1">
+        <h3>Trial Sessions</h3>
+        <details>
+          <summary>Do you offer trial sessions?</summary>
+          <p>The <a href="https://book.creative-iq.co.uk/book-now">Creative IQ booking page</a> shows which venues offer free or paid trials.</p>
+        </details>
+        <details>
+          <summary>What happens during a trial?</summary>
+          <p>An instructor introduces the kit, helps your child build a robot and gives them time to test it.</p>
+        </details>
+        <details>
+          <summary>Will I get feedback after a trial?</summary>
+          <p>Instructors give verbal and written feedback on the build and how your child approached it.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-2">
+        <h3>Courses vs. Clubs</h3>
+        <details>
+          <summary>How are the courses different from school clubs?</summary>
+          <p>The courses follow RoboThink’s eight-level curriculum. Projects build on earlier lessons as children develop their skills.</p>
+        </details>
+        <details>
+          <summary>What skills can my child learn?</summary>
+          <p>Depending on the course, children can practise robotics, programming, engineering design, game creation and teamwork.</p>
+        </details>
+        <details>
+          <summary>Do you offer AI lessons?</summary>
+          <p>Age-appropriate AI activities are included in advanced engineering and coding tracks.</p>
+        </details>
+        <details>
+          <summary>At what point can children start learning AI?</summary>
+          <p>Creative IQ introduces AI after students complete advanced engineering levels or Coding Lab courses.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-3">
+        <h3>Student Progress</h3>
+        <details>
+          <summary>How will I know how my child is doing?</summary>
+          <p>Children receive written feedback after each lesson. Creative IQ also shares photos and videos privately with parents.</p>
+        </details>
+        <details>
+          <summary>How often are students assessed?</summary>
+          <p>Every sixth lesson reviews the skills covered in the previous five.</p>
+        </details>
+        <details>
+          <summary>How can we use the written feedback?</summary>
+          <p>Keep the feedback sheets together to build a record of your child’s STEM projects and progress.</p>
+        </details>
+        <details>
+          <summary>Do children earn certificates?</summary>
+          <p>Yes. Creative IQ awards a certificate for each level completed.</p>
+        </details>
+        <details>
+          <summary>How long does the engineering pathway take?</summary>
+          <p>The eight levels typically take over three years. Students can progress at their own pace.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-4">
+        <h3>STEM Competitions</h3>
+        <details>
+          <summary>When can students qualify for competitions?</summary>
+          <p>Students can enter the qualification stage after completing at least two terms.</p>
+        </details>
+        <details>
+          <summary>Where are competitions held?</summary>
+          <p>Events may take place at RoboThink Discovery Centres, schools or universities. Families receive venue details in advance.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-5">
+        <h3>Workshops</h3>
+        <details>
+          <summary>Who can take part in STEM workshops?</summary>
+          <p>Workshops welcome new and returning students. See the <a href="/for-the-community/">community page</a> for school and community partnerships.</p>
+        </details>
+        <details>
+          <summary>Should my child bring lunch?</summary>
+          <p>For the workshops described on the homepage, children only need a nut-free snack and a drink.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-6">
+        <h3>Robotics</h3>
+        <details>
+          <summary>Does my child need to bring equipment?</summary>
+          <p>Creative IQ supplies robotics kits, tools and materials. Laptops are provided for Coding Lab sessions.</p>
+        </details>
+        <details>
+          <summary>What if my child already has robotics experience?</summary>
+          <p>Instructors assess new students and adapt projects to keep them appropriately challenged.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-7">
+        <h3>Safety</h3>
+        <details>
+          <summary>Are instructors trained?</summary>
+          <p>Creative IQ says instructors have enhanced DBS checks and safeguarding training. See its <a href="/child-safeguarding-policy-and-procedures/">safeguarding policy</a>.</p>
+        </details>
+        <details>
+          <summary>What is the instructor-to-student ratio?</summary>
+          <p>Creative IQ lists one instructor for every five students.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-8">
+        <h3>Cancellations</h3>
+        <details>
+          <summary>What happens if I need to cancel or change a booking?</summary>
+          <p>See Creative IQ’s <a href="/refund-and-cancellation-policy/">refund and cancellation policy</a> and contact the team about your booking.</p>
+        </details>
+        <details>
+          <summary>What if Creative IQ cancels a session?</summary>
+          <p>Creative IQ says it will arrange a replacement session or offer a credit. See the <a href="/refund-and-cancellation-policy/">cancellation policy</a> for details.</p>
+        </details>
+      </div>
+      <div class="answer-group" id="faq-topic-9">
+        <h3>Student Engagement</h3>
+        <details>
+          <summary>What if my child isn’t enjoying the lessons?</summary>
+          <p>Speak with the team. They can discuss what your child enjoys and adapt the course where possible.</p>
+        </details>
+        <details>
+          <summary>Can children get individual guidance?</summary>
+          <p>Instructors use small classes to adapt projects to each child’s experience and interests.</p>
+        </details>
+        <details>
+          <summary>Why does motivation matter in STEM?</summary>
+          <p>Each level adds harder challenges. Staying engaged helps children practise problem-solving and grow in confidence.</p>
+        </details>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer dark" id="footer">
+  <div class="wrap">
+    <section class="footer-newsletter" aria-labelledby="newsletter-title">
+      <canvas class="newsletter-water" aria-hidden="true"></canvas>
+      <div class="newsletter-copy">
+        <p class="kicker">Newsletter</p>
+        <h2 id="newsletter-title">Don’t miss our <em>latest updates.</em></h2>
+        <form class="footer-subscribe" method="post" action="https://www.creative-iq.co.uk/wp-admin/admin-ajax.php?action=tnp&amp;na=s">
+          <input type="hidden" name="nlang">
+          <label class="footer-sr" for="newsletter-email">Your email</label>
+          <input id="newsletter-email" type="email" name="ne" autocomplete="email" placeholder="Your email" required>
+          <button class="button" type="submit">Subscribe <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+      <img class="footer-art" src="/assets/footer-robot.webp" alt="" width="440" height="431" loading="lazy" decoding="async">
+    </section>
+    <div class="footer-columns">
+      <div class="footer-brand">
+        <a href="#top" aria-label="Creative IQ home"><img src="assets/creative-iq-logo-white.webp" alt="" width="280" height="204" loading="lazy"></a>
+        <div class="footer-social" aria-label="Social platforms">
+          <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/" aria-label="Instagram">◎</a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          <a href="https://twitter.com/" aria-label="X (Twitter)">𝕏</a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="/our-story/">Our Story</a></li>
+          <li><a href="/our-brands/">Our Brands</a></li>
+          <li><a href="/our-courses/">Our Courses</a></li>
+          <li><a href="/for-the-community/">For the Community</a></li>
+          <li><a href="/our-locations/">Our Locations</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact us</h3>
+        <address>
+          <p>34 Church Road<br>Stanmore HA7 4AL</p>
+          <a href="tel:+447361594569">+44 73 6159 4569</a>
+          <a href="mailto:info@creative-iq.co.uk">info@creative-iq.co.uk</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div><a href="/terms-and-conditions/">Terms and Conditions</a><a href="/privacy-policy/">Privacy Policy</a></div>
+      <span>Copyright © <span id="footer-year">2026</span> Creative IQ. All rights reserved.</span>
+      <span>Original website design by <a href="https://sniro.com/">Sniro</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
